@@ -45,14 +45,12 @@ if username in registrovani_uzivatele and registrovani_uzivatele[username] == pa
 
 else:
     print("špatné jméno/heslo, končím")
-
     quit()
 
 vybrany_text_cislo = int(input("Zadej text k analýze v rozmezí 1 až 3: ")) -1
-if vybrany_text_cislo + 1  not in range(1,4):
+if vybrany_text_cislo + 1 not in range(1,4):
     print("neplatné číslo textu, končím")
     quit()
-
 
 vycisteny_text = []
 
@@ -75,7 +73,7 @@ for slovo_velkymi_pismeny in vycisteny_text:
     if slovo_velkymi_pismeny.isupper():
         pocet_slov_velkymi_pismeny += 1
         #print(slovo_velkymi_pismeny)
-print("Počet slov psané velkými písmeny: ", pocet_slov_velkymi_pismeny) # text 1 -2 slova, dle zadání má být jen jedno
+print("Počet slov psané velkými písmeny: ", pocet_slov_velkymi_pismeny)
 
 # - počet slov psaných malými písmeny,
 pocet_slov_malymi_pismeny = 0
@@ -103,7 +101,6 @@ for slv in vycisteny_text:
          delky_slov[len(slv)] = 1
     else:
          delky_slov[len(slv)] += 1
-#print(delky_slov)
 
 print(oddelovac)
 print("""Délka |    Výskyt    | Počet""")
