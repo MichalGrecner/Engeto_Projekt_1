@@ -3,7 +3,7 @@ author =
 '''
 TEXTS = ['''
 Situated about 10 miles west of Kemmerer, 
-Fossil Butte is a ruggedly impressive 
+Fossil Butte is a ruggedly impressive                   
 topographic feature that rises sharply 
 some 1000 feet above Twin Creek Valley 
 to an elevation of more than 7500 feet 
@@ -53,9 +53,13 @@ if vybrany_text_cislo + 1 not in range(1,4):
     quit()
 
 vycisteny_text = []
-
+vycistene_slovo = str
 for slovo in TEXTS[vybrany_text_cislo].split():
-    vycisteny_text.append(slovo.strip(".:;,"))
+    vycistene_slovo = slovo.strip(".:;,")
+    if vycistene_slovo.isalnum():
+        vycisteny_text.append(vycistene_slovo)
+
+print("vycisteny text: ", vycisteny_text)
 
 # - počet slov,
 print("počet slov: ", len(vycisteny_text))
