@@ -50,7 +50,7 @@ else:
 status = 1
 while status:
     vybrany_text_cislo = input("Zadej text k analýze v rozmezí 1 až 3: ")
-    if vybrany_text_cislo.isnumeric() and int(vybrany_text_cislo) >= 1 and int(vybrany_text_cislo) <= 3 :
+    if vybrany_text_cislo.isnumeric() and int(vybrany_text_cislo) >= 1 and int(vybrany_text_cislo) <= 3:
         vybrany_text_cislo = int(vybrany_text_cislo) -1
         status = 0
     else:
