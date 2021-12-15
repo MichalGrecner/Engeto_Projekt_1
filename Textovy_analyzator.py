@@ -47,10 +47,17 @@ else:
     print("špatné jméno/heslo, končím")
     quit()
 
-vybrany_text_cislo = int(input("Zadej text k analýze v rozmezí 1 až 3: ")) -1
-if vybrany_text_cislo + 1 not in range(1,4):
-    print("neplatné číslo textu, končím")
-    quit()
+status = 1
+while status:
+    vybrany_text_cislo = input("Zadej text k analýze v rozmezí 1 až 3: ")
+    if vybrany_text_cislo.isnumeric() and int(vybrany_text_cislo) >= 1 and int(vybrany_text_cislo) <= 3 :
+        vybrany_text_cislo = int(vybrany_text_cislo) -1
+        status = 0
+    else:
+        print("Neplatný vstup!")
+
+
+
 
 vycisteny_text = []
 vycistene_slovo = str
